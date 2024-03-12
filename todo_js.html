@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white; ">
+    <div style="margin: 100px;" id="todo">
+        
+        <input type="text" style="color: black;" id="input-field"/>
+        <button onclick="addtodo()">Add</button>
+        <ul id="ulist">
+            <li>gg</li>
+            <li>wasss up</li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    const ulist = document.querySelector('#ulist');
+    function addtodo(){
+        const list = document.createElement('li');
+        list.setAttribute('class','listyle');
+        list.setAttribute('onclick','completed()');
+        list.textContent = document.querySelector('#input-field').value;
+        ulist.appendChild(list);
+    }
+    console.log(ulist)
+    function completed(){
+        const list=document.getElementsByClassName('listyle')
+        console.log(list)
+        list.style = "text-decoration:line-through"
+    }
+    
+</script>
+</html>

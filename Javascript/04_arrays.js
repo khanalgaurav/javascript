@@ -5,7 +5,9 @@ console.log(myArray[0])
 
 //array also has methods study all from w3school please
     //examples
-        /*  array.length()
+
+        /*  # basic methods
+            array.length()
             array.toString()
             array.at() -> gives the element at given positon 
             array.join() -> converts the array into string same as toString() but in addition we can specify the separator inside the parameter
@@ -30,17 +32,51 @@ console.log(myArray[0])
                                     myArray.splice(3,0, "Rajaul", "Chaman")
                                     then the result will be,
                                         ["Gaurav","Nayan","soraz","Rajaul","Chaman","Rukesh"]
-        */
+            # Array search methods
+            array.indexof()
+            array.lastIndexOf()
+            array.includes("element") -> gives boolean value if the element exist on the array or not
+            array.find(value,index,array) -> bujena aaile
+            array.findIndex() -> bujena aaile
+            array.findLast() -> bujena aaile
+            array.findLastIndex() -> bujena aaile
+            
+            # Array sorting methods
+            array.sort() -> sorts in alphabetic order. alters the original array
+            array.reverse() -> reverse the order of array
+            //combining sort and reverse we can sort in reverse alphabetic order
+            array.toSorted() -> works as sort but create a new array that is sorted
+            array.toReversed()
+            */
+
 
 //hit and trial testing to learn :-
 
-const myArr = new Array(1,2,3,4,5,6)
+const myArr = new Array(0,1,2,3,4,5,6)
 console.log(myArr)
 
-console.log(myArr.slice(1,3));
-console.log(myArr)
+// console.log(myArr.slice(1,3));
+// console.log(myArr)
 
-console.log(myArr.splice(1,3))
-console.log(myArr) //original array is changed i.e spliced into two arrays 1) The desired slice of the array and 2) the original array without the sliced part
+// console.log(myArr.splice(1,3))
+// console.log(myArr) 
+//original array is changed i.e spliced into two arrays 1) The desired slice of the array and 2) the original array without the sliced part
 
-console.log(myArr.slice(1))
+// console.log(myArr.slice(1))
+
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Array Part 2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+//another way to use concat/ merging of array
+// const myArr2 = new Array(7,8,9)
+
+// const allDecimalNumbers = [...myArr,...myArr2]
+// console.log(allDecimalNumbers)
+
+var numArray = new Array(140000, 104, 99);
+numArray = numArray.sort((a,b)=>(a-b));
+console.log(numArray)
+
